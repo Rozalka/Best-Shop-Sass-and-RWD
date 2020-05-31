@@ -1,0 +1,112 @@
+.top-menu {
+    height: 70px;
+    box-shadow: 0 3px 6px $color-primary-shadow;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+        li {
+            padding: 0 26px;
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            .nav-link {
+                font-family: $font-paragraphs;
+                font-size: 0.6875rem;
+                font-weight: 700;
+                letter-spacing: 3.28px;
+                color: $color-grey;
+                padding: 28px 18px 23px;
+                border-bottom: 4px solid transparent;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: $color-black;
+                    border-color: $color-primary;
+                }
+            }
+        }
+
+        .top-menu-items {
+            display: flex;
+
+            @include mobile {
+                position: absolute;
+                left: 0;
+                top: 95px;
+                flex-direction: column;
+                background-color: $color-white;
+                width: 100%;
+                padding-bottom: 20px;
+                display: none;
+                box-shadow: 0 3px 6px $color-primary-shadow;
+
+                li {
+                    padding: 0;
+
+                    .nav-link {
+                        padding: 14px 20px;
+                        display: block;
+                        border-bottom: none;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .menu-btn {
+        display: none;
+        position: absolute;
+        opacity: 0;
+        top: -10000px;
+        left: -10000px;
+        @include mobile {
+            &:checked {
+                ~ .top-menu-items {
+                    display: flex;
+                }
+                ~ .hamburger-menu {
+                    span {
+                        &:nth-child(1) {
+                            transform: rotate(45deg) translate(2px, 5px);
+                        }
+                        &:nth-child(3) {
+                            transform: rotate(-45deg) translate(2px, -5px);
+                        }
+                        &:nth-child(2) {
+                            opacity: 0;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .hamburger-menu {
+        display: none;
+
+        span {
+            width: 20px;
+            height: 2px;
+            display: block;
+            margin-bottom: 3px;
+            background: $color-primary;
+            transition: 0.3s all ease-in-out;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @include mobile {
+            display: block;
+        }
+    }
+}

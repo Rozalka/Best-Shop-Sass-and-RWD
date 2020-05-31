@@ -1,0 +1,212 @@
+
+// **** benefits section styles ****
+
+
+.benefits {
+    background: $color-light-grey;
+    padding: 100px 0;
+
+    @include tablet {
+        padding: 42px 0;
+    }
+
+    .benefits-container {
+        padding: 0 100px;
+
+        @include tablet {
+            padding: 0 30px;
+        }
+
+        .benefit {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            background: $color-white;
+            border: 1px solid #E8E9ED;
+            border-radius: 5px;
+            margin-bottom: 37px;
+
+            @include tablet {
+                flex-direction: column-reverse !important;
+                align-items: center;
+                padding: 0 20px !important;
+                margin-bottom: 27px;
+            }
+
+            .benefit-info {
+                margin: 90px 35px;
+                max-width: 415px;
+
+                @include tablet {
+                    margin: 26px;
+                    max-width: 100%;
+
+                }
+
+                p {
+                    margin-top: 30px;
+                    line-height: 22px;
+
+                    @include tablet {
+                        margin-top: 10px;
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    width: 328px;
+                    height: 4px;
+                    display: block;
+                    margin-top: 50px;
+                    background-color: $color-green;
+
+                    @include tablet {
+                        display: none;
+                    }
+                }
+
+            }
+
+            .benefit1 {
+                &::after {
+                    background-color: $color-redish;
+                }
+            }
+
+            .benefit2 {
+                &::after {
+                    background-color: $color-primary;
+                }
+            }
+
+            .benefit-pic {
+                position: relative;
+
+                img {
+                    position: relative;
+                    z-index: 2;
+                }
+
+
+            }
+
+            .pic1 {
+                margin-right: 117px;
+                margin-bottom: 38px;
+
+                @include tablet {
+                    margin: 42px 0 0;
+                }
+            }
+
+            .pic1::before {
+                content: "";
+                width: 180px;
+                height: 180px;
+                background-color: $color-redish;
+                position: absolute;
+                display: block;
+                border-radius: 40px;
+                top: -40px;
+                right: 0;
+                transform: rotate(45deg);
+
+                @include tablet {
+                    width: 90px;
+                    height: 90px;
+                    top: -25px;
+                    right: -10px;
+                }
+            }
+
+            .pic1 img {
+                width: 386px;
+                height: auto;
+
+                @include tablet {
+                    width: 192px;
+                }
+            }
+
+            .pic2::before {
+                content: "";
+                width: 320px;
+                height: 320px;
+                background: $color-primary;
+                position: absolute;
+                display: block;
+                border-radius: 50%;
+                top: -20px;
+                left: 0;
+
+                @include tablet {
+                    width: 132px;
+                    height: 132px;
+                    top: 12px;
+                }
+            }
+
+            .pic2 img {
+                width: 426px;
+                height: auto;
+
+                @include tablet {
+                    width: 175px;
+                    margin-top: 19px;
+                }
+            }
+
+        }
+
+        .benefit:nth-of-type(2) {
+            flex-direction: row-reverse;
+            padding: 0 20px 0 70px;
+        }
+
+        .benefit3 {
+            display: flex;
+            margin-bottom: 0;
+
+            @include tablet {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .benefit3a {
+                width: 620px;
+
+                @include tablet {
+                    width: 100%;
+                    margin-bottom: 0;
+                }
+            }
+
+            .benefit-pic3 {
+                flex-grow: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $color-green;
+                border: none;
+                margin-bottom: 37px;
+                margin-left: 60px;
+
+                @include tablet {
+                    width: 100%;
+                    margin-left: 0;
+                    border: 1px solid #E8E9ED;
+                    border-radius: 5px;
+                }
+            }
+
+            .benefit-pic3 img {
+                width: 295px;
+                height: auto;
+                margin-top: 55px;
+
+            }
+        }
+
+    }
+
+}
