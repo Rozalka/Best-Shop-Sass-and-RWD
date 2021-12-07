@@ -1,124 +1,204 @@
 .top-menu {
-    height: 70px;
-    box-shadow: 0 3px 6px $color-primary-shadow;
+  height: 110px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(222, 222, 222, 1) 100%,
+    rgba(112, 112, 112, 1) 100%
+  );
 
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-    }
+  &__container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .logo-mb {
+    display: none;
+  }
+}
+.logo {
+  background-image: url("/assets/iklogo-desc.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 100px;
+  margin-top: 30px;
+  margin-right: 200px;
+  margin-left: 50px;
 }
 
 .top-menu-items {
-    position: absolute;
-    left: 0;
-    top: 95px;
-    flex-direction: column;
-    background-color: $color-white;
-    width: 100%;
-    padding-bottom: 20px;
-    display: none;
-    box-shadow: 0 3px 6px $color-primary-shadow;
+  z-index: 10;
+  position: absolute;
+  left: 0px;
+  top: 90px;
+  flex-direction: column;
+  width: 100%;
+  // padding-bottom: 20px;
+  // display: none;
+  clear: both;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.6s ease-in-out;
 
-    li {
-        padding: 0;
+  li {
+    padding-left: 40px;
 
-        .nav-link {
-            padding: 14px 20px;
-            display: block;
-            border-bottom: none;
-            font-family: $font-paragraphs;
-            font-size: 0.6875rem;
-            font-weight: 700;
-            letter-spacing: 3.28px;
-            color: $color-grey;
-            text-transform: uppercase;
+    .nav-link {
+      padding: 18px 20px;
+      display: block;
+      border-bottom: none;
+      font-family: $font-lists;
+      font-size: 1rem;
+      font-weight: bold;
+      color: $color-header-black;
+      background-color: white;
 
-            &:hover {
-                color: $color-black;
-            }
-        }
+      &:hover {
+        color: $color-hover-grey;
+      }
     }
+  }
 }
-  
+
 .menu-btn {
-    display: none;
-    position: absolute;
-    opacity: 0;
-    top: -10000px;
-    left: -10000px;
+  display: none;
+  position: absolute;
+  opacity: 0;
+  top: -10000px;
+  left: -10000px;
 
-    &:checked {
-
-        ~.top-menu-items {
-            display: flex;
-        }
-
-        ~.hamburger-menu {
-
-            span {
-                &:nth-child(1) {
-                    transform: rotate(45deg) translate(2px, 5px);
-                }
-
-                &:nth-child(3) {
-                    transform: rotate(-45deg) translate(2px, -5px);
-                }
-
-                &:nth-child(2) {
-                    opacity: 0;
-                }
-            }
-        }
+  &:checked {
+    ~ .top-menu-items {
+      display: flex;
+      height: 300px;
     }
+
+    ~ .hamburger-menu {
+      span {
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(2px, 8px);
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg) translate(2px, -8px);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+      }
+    }
+  }
 }
 
 .hamburger-menu {
+  display: block;
+  margin-right: 50px;
+
+  span {
+    width: 40px;
+    height: 4px;
     display: block;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    background: $color-menu-black;
+    transition: 0.6s all ease-in-out;
 
-    span {
-        width: 20px;
-        height: 2px;
-        display: block;
-        margin-bottom: 3px;
-        background: $color-primary;
-        transition: 0.3s all ease-in-out;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
+    &:last-child {
+      margin-bottom: 0;
     }
+  }
 }
 
-@media (min-width: 790px) {
-    .top-menu-items {
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        top: 0;
-        box-shadow: none;
-        padding-bottom: 0;
+@media (max-width: 1281px) {
+  .logo {
+    margin-right: 60px;
+  }
+}
 
-        li {
-            padding: 0 26px;
+@media (max-width: 991px) {
+  header {
+    border: none;
+  }
+  .top-menu {
+    height: 90px;
+    background-image: none;
+    box-shadow: 0 3px 6px $color-primary-shadow;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: $color-white;
+  }
+  .top-menu__container {
+    justify-content: space-between;
+    box-shadow: 0 3px 6px $color-primary-shadow;
+    .logo {
+      display: none;
+    }
+    .logo-mb {
+      display: flex;
+      align-items: center;
+      margin-left: 50px;
+      padding-top: 10px;
+      &__img {
+        width: 70px;
+        height: 70px;
+        background-image: url("/assets/iklogo-mb.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      p {
+        font-size: 1.125rem;
+        font-family: $font-lists;
+        color: $color-menu-black;
+      }
+    }
+  }
+}
 
-            .nav-link {
-                padding: 27px 18px;
-                border-bottom: 4px solid transparent;
+@media (min-width: 992px) {
+  .top-menu-items {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    box-shadow: none;
+    padding-bottom: 0;
+    height: 90px;
 
-                &:hover {
-                    border-color: $color-primary;
-                }
-            }
+    li {
+      .nav-link {
+        padding: 15px 5px;
+        border-bottom: 2px solid transparent;
+        background-color: transparent;
 
-            &:last-child {
-                padding-right: 0;
-            }
+        &:hover {
+          border-color: $color-border;
         }
+      }
     }
+  }
 
-    .hamburger-menu {
-        display: none;
+  .hamburger-menu {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .top-menu__container .logo-mb {
+    margin-left: 20px;
+  }
+  .hamburger-menu {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .logo-mb {
+    p {
+      font-size: 1rem;
     }
+  }
 }

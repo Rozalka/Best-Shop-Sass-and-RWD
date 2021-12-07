@@ -1,15 +1,9 @@
 //  fonts
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
-$font-headers: "Raleway", sans-serif;
-$font-paragraphs: "Open Sans", sans-serif;
-
-// buttons
-
-$radius-big-btn: 40px;
-$radius-medium-btn: 35px;
-$radius-small-btn: 23px;
-
-
+$font-headers: "Merriweather", serif;
+$font-lists: "Open Sans", sans-serif;
+$font-main: "Lato", sans-serif;

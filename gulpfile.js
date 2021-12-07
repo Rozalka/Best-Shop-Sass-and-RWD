@@ -1,44 +1,38 @@
+const entryPath = ".";
+
 const gulp = require("gulp");
+const sass = require("gulp-sass")(require("sass"));
+const sourcemaps = require("gulp-sourcemaps");
+const autoprefixer = require("gulp-autoprefixer");
+const browserSync = require("browser-sync").create();
 
-const sass = require("gulp-sass");
-
-const sourcemaps = require('gulp-sourcemaps');
-
-const autoprefixer = require('gulp-autoprefixer');
-
-const browserSync = require('browser-sync').create();
-
-sass.compiler = require('sass');
-
- function server(cb) {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
-
-    cb()
-};
-
- 
-function css() {
-  return gulp.src('./scss/main.scss')
+function compileSass(done) {
+  gulp
+    .src(entryPath + "/scss/main.scss")
     .pipe(sourcemaps.init())
-    .pipe(sass({
-        outputStyle: "expanded"
-    }).on('error', sass.logError))
-    .pipe(autoprefixer({}))
+    .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
+    .pipe(autoprefixer())
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest('./css'))
-    .pipe(browserSync.stream())
+    .pipe(gulp.dest(entryPath + "/css"));
+
+  done();
 }
 
-function watch(cb) {
-    gulp.watch("./scss/**/*.scss", gulp.series(css));
-    gulp.watch("./*.html").on('change', browserSync.reload);
-    cb();
+function watcher(done) {
+  browserSync.init({
+    server: "./" + entryPath,
+  });
+
+  gulp.watch(entryPath + "/scss/**/*.scss", gulp.series(compileSass, reload));
+  gulp.watch(entryPath + "/*.html", gulp.series(reload));
+
+  done();
 }
 
-module.exports.css = css;
-module.exports.watch = watch;
-module.exports.default = gulp.series(server, css, watch);
+function reload(done) {
+  browserSync.reload();
+  done();
+}
+
+exports.sass = gulp.parallel(compileSass);
+exports.default = gulp.parallel(compileSass, watcher);

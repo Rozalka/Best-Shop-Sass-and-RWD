@@ -1,229 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link rel="icon" href="/assets/iklogo.ico" />
+    <title>Tłumacz przysięgły</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/main.css" rel="stylesheet">
-    <title>Best-Shop-Sass-RWD</title>
-</head>
-
-<body>
+  <body>
     <!-- header opening -->
     <header>
-        <div class="top-menu">
-            <div class="container">
-                <a href="#" class="logo">BestShop</a>
-                <nav>
-                    <input type="checkbox" class="menu-btn" id="menu-btn">
-                    <label for="menu-btn" class="hamburger-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </label>
-                    <ul class="top-menu-items">
-                        <li><a href="#why-us" class="nav-link">why us</a></li>
-                        <li><a href="#benefits" class="nav-link">benefits</a></li>
-                        <li><a href="#prices" class="nav-link">prices</a></li>
-                        <li><a href="#contact" class="nav-link">contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+      <div class="top-menu">
+        <div class="top-menu__container">
+          <a href="#" class="logo"> </a>
+          <a href="#" class="logo-mb">
+            <div class="logo-mb__img"></div>
+            <p>Irena Kartocha</p>
+          </a>
+          <nav>
+            <input type="checkbox" class="menu-btn" id="menu-btn" />
+            <label for="menu-btn" class="hamburger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+            <ul class="top-menu-items">
+              <li><a href="#offer" class="nav-link">Oferta</a></li>
+              <li>
+                <a href="#qualifications" class="nav-link">Kwalifikacje</a>
+              </li>
+              <li><a href="#facilities" class="nav-link">Udogodnienia</a></li>
+              <li><a href="#contact" class="nav-link">Kontakt</a></li>
+              <li><a href="#map" class="nav-link">Mapa dojazdu</a></li>
+            </ul>
+          </nav>
         </div>
+      </div>
     </header>
     <!-- header closing -->
 
     <main>
+      <!-- opening section  -->
+      <section class="opening">
+        <div class="container opening-container">
+          <img src="assets/ksiazki.png" alt="books" />
+          <div class="opening-container__info">
+            <h1>
+              Tłumacz przysięgły<br />
+              <span>języka niemieckiego</span>
+            </h1>
+          </div>
+        </div>
+      </section>
+      <!-- opening section closing -->
+      <!-- offer section -->
+      <section class="offer" id="offer">
+        <div class="container offer-container">
+          <span>O</span>
+          <!-- <img src="/assets/e.png" /> -->
+          <div class="offer-container__content">
+            <h2 class="offer-container__small-header">Oferta/</h2>
+            <div class="offer-container__info">
+              <p>
+                Wykonuję wysokiej jakości tłumaczenia uwierzytelnione z języka
+                niemieckiego na polski z języka polskiego na niemiecki:
+              </p>
+              <ul class="offer-container__list">
+                <li class="offer-container__item">dokumentów samochodowych,</li>
+                <li class="offer-container__item">
+                  pism sądowych i innych postanowień organów administracji
+                  państwowej, umów handlowych i cywilnoprawnych,
+                </li>
+                <li class="offer-container__item">
+                  dokumentów szkolnych i metrykalnych,
+                </li>
+                <li class="offer-container__item">
+                  dokumentów ekonomicznych, księgowych i medycznych,
+                </li>
+                <li class="offer-container__item">
+                  tekstów publicystycznych, książek,
+                </li>
+                <li class="offer-container__item">
+                  korespondencji handlowej i prywatnej,
+                </li>
+                <li class="offer-container__item">
+                  a także zaświadczeń, poświadczeń, referencji, deklaracji,
+                  faktur itp.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- offer section closing -->
+      <!-- section qualifications -->
+      <section class="qualifications" id="qualifications">
+        <div class="container qualifications-container">
+          <div class="qualifications-container__content">
+            <h2 class="qualifications-container__small-header">
+              Kwalifikacje/
+            </h2>
+            <ul class="qualifications-container__list">
+              <li class="qualifications-container__item">
+                Dyplom <span>magistra filologii germańskiej</span>
+              </li>
+              <li class="qualifications-container__item">
+                <span>Uprawnienia tłumacza przysięgłego</span> (język niemiecki
+                — zaświadczenie tłumacza przysięgłego nr TP/1926/06; wpis na
+                stronie Ministerstwa Sprawiedliwości)
+              </li>
+            </ul>
+          </div>
+          <!-- <img src="/assets/obrazek.png" /> -->
+        </div>
+        <div class="qualifications__img">
+          <img src="/assets/obrazek.png" />
+        </div>
+      </section>
+      <!-- section qualifications closing -->
+      <!-- benefits section -->
+      <section class="benefits">
+        <div class="container benefits-container">
+          <div class="benefits-info">
+            <div class="box">
+              <div class="icon">
+                <img
+                  src="/assets/kolko1.png"
+                  alt="quality"
+                  class="benefits-img"
+                />
+              </div>
+              <p class="benefits-text">Wysoka jakość tłumaczeń</p>
+            </div>
+            <div class="box">
+              <div class="icon">
+                <img src="/assets/kolko2.png" alt="time" class="benefits-img" />
+              </div>
+              <p class="benefits-text">Krótkie terminy realizacji</p>
+            </div>
+            <div class="box">
+              <div class="icon">
+                <img
+                  src="/assets/kolko3.png"
+                  alt="price"
+                  class="benefits-img"
+                />
+              </div>
+              <p class="benefits-text">Przystępne ceny<br /></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- benefits section closing -->
+      <!-- facilities section -->
+      <section class="facilities" id="facilities">
+        <div class="container facilities-container">
+          <div class="facilities__img">
+            <img src="/assets/obrazek-2.png" />
+          </div>
+          <div class="facilities-container__content">
+            <h2 class="facilities-container__small-header">Udogodnienia/</h2>
+            <div class="facilities-container__info">
+              <ul class="facilities-container__list">
+                <li class="facilities-container__item">
+                  Możliwość przesyłania tekstów faksem lub e-mailem (w przypadku
+                  tłumaczeń przysięgłych konieczność okazania oryginału przy
+                  odbiorze
+                </li>
+                <li class="facilities-container__item">
+                  Możliwość odbioru faksem lub e-mailem tłumaczeń nie
+                  wymagających poświadczenia pieczęcią tłumacza przysięgłego
+                </li>
+                <li class="facilities-container__item">
+                  Krótkie terminy (zazwyczaj z dnia na dzień), a także możliwość
+                  realizacji tłumaczenia w dniu zlecenia
+                </li>
+                <li class="facilities-container__item">
+                  Zachowanie tajemnicy handlowej
+                </li>
+                <li class="facilities-container__item">
+                  Atrakcyjne ceny, możliwość negocjacji warunków przy większych
+                  zleceniach
+                </li>
+                <li class="facilities-container__item">
+                  Dla stałych klientów rabaty!
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- offer section closing -->
 
-        <!-- opening section  -->
-        <section class="opening">
-            <div class="container opening-container">
-                <h1>sell more!</h1>
-                <p>Open shop on our platform and increase your sales</p>
-                <a href="#"><button class="big-btn">Open your shop</button></a>
+      <!-- section contact -->
+      <section class="contact" id="contact">
+        <div class="container contact-container">
+          <div class="contact-container__content">
+            <h2 class="contact-container__small-header">Kontakt</h2>
+            <div class="contact-container__info">
+              <div class="person">Irena Kartocha</div>
+              <div class="address">
+                Ul. Szymanowskiego 4/75<br />
+                22-100 Chełm
+              </div>
+              <div class="fax">Fax. 82 56 28 102</div>
+              <div class="e-mail">e-mail: kartocha@op.pl</div>
             </div>
-            <img src="assets/Background.png" alt="laptop">
-        </section>
-        <!-- opening section closing -->
-
-        <!-- statistics section -->
-        <section class="statistics" id="why-us">
-            <div class="container statistics-container">
-                <h2 class="statistics-small-header">The most popular sales platform in country</h2>
-                <div class="statistics-info">
-                    <div class="box">
-                        <div class="icon circle1">
-                            <img src="assets/Person.svg" alt="person" class="statistics-img">
-                        </div>
-                        <p class="statistics-number">100000+</p>
-                        <p class="statistics-text">daily entries</p>
-                    </div>
-                    <div class="box">
-                        <div class="icon circle2">
-                            <img src="assets/Eye.svg" alt="eye" class="statistics-img">
-                        </div>
-                        <p class="statistics-number">200000+</p>
-                        <p class="statistics-text">seen products every day</p>
-                    </div>
-                    <div class="box">
-                        <div class="icon circle3">
-                            <img src="assets/Catalog.svg" alt="catalog" class="statistics-img">
-                        </div>
-                        <p class="statistics-number">10000+</p>
-                        <p class="statistics-text">added posts daily</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- statistics section closing -->
-        <!-- section benefits -->
-        <section class="benefits" id="benefits">
-            <div class="container benefits-container">
-                <div class="benefit">
-                    <div class="benefit-info benefit1">
-                        <h2>Be always first</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                    </div>
-                    <div class="benefit-pic pic1">
-                        <img src="assets/Macbook.png" alt="macbook" class="benefit-img">
-                    </div>
-                </div>
-                <div class="benefit">
-                    <div class="benefit-info benefit2">
-                        <h2>Your shop is where you are!</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                    </div>
-                    <div class="benefit-pic pic2">
-                        <img src="assets/iPhone.png" alt="iphone" class="benefit-img">
-                    </div>
-                </div>
-                <div class="benefit3">
-                    <div class="benefit benefit3a">
-                        <div class="benefit-info">
-                            <h2>Increase recognition your brand!</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                        </div>
-                    </div>
-                    <div class="benefit-pic3">
-                        <img src="assets/Trumpet.png" alt="trumpet" class="benefit-img">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- section benefits closing -->
-        <!-- section pricing -->
-        <section class="pricing" id="prices">
-            <div class="container pricing-container">
-                <h2 class="pricing-header">Pricing</h2>
-                <div class="pricing-boxes">
-                    <div class="pricing-single pricing-basic">
-                        <div class="pricing-info">
-                            <div class="pricing-type">Basic</div>
-                            <div class="pricing-cost">$0</div>
-                        </div>
-                        <ul class="pricing-details">
-                            <li class="checked">100 MB HDD</li>
-                            <li class="checked">1 Subdomain</li>
-                            <li class="checked">2 E-mails</li>
-                            <li class="not-checked">Two years licene</li>
-                            <li class="not-checked">Full support</li>
-                        </ul>
-                        <a href="#" class="small-btn">Begin</a>
-                    </div>
-                    <div class="pricing-single pricing-professional">
-                        <div class="pricing-info">
-                            <div class="pricing-type">Professional</div>
-                            <div class="pricing-cost">$25</div>
-                            <div class="offer-time">Limited offer</div>
-                        </div>
-                        <ul class="pricing-details">
-                            <li class="checked">500 MB HDD</li>
-                            <li class="checked">2 Subdomains</li>
-                            <li class="checked">5 E-mails</li>
-                            <li class="checked">One year licene</li>
-                            <li class="not-checked">Full support</li>
-                        </ul>
-                        <a href="#" class="small-btn">Begin</a>
-                    </div>
-                    <div class="pricing-single pricing-premium">
-                        <div class="pricing-info">
-                            <div class="pricing-type">Premium</div>
-                            <div class="pricing-cost">$60</div>
-                            <div class="offer-time">Limited offer</div>
-                        </div>
-                        <ul class="pricing-details">
-                            <li class="checked">2 GB HDD</li>
-                            <li class="checked">5 Subdomains</li>
-                            <li class="checked">20 E-mails</li>
-                            <li class="checked">Two years licene</li>
-                            <li class="checked">Full support</li>
-                        </ul>
-                        <a href="#" class="small-btn">Begin</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- section pricing closing -->
-        <!-- section contact -->
-        <section class="contact" id="contact" >
-            <div class="container">
-                <div class="contact-info">
-                    <h1>Any questions?</h1>
-                    <p>Leave your email address or call us!</p>
-                    <div class="contact-tools">
-                        <div class="e-mail">info@bestshop.xyz</div>
-                        <div class="telephone">123 456 789</div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form class="form">
-                        <div class="user-info">
-                            <label class="user-name">name</label>
-                            <input type="text" name="name">
-                        </div>
-                        <div class="user-info">
-                            <label class="user-email">email</label>
-                            <input type="email">
-                        </div>
-                        <div class="user-agree">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span></span>
-                                <p>I hereby give consent for my personal data included in my application to be processed
-                                    for the purposes of the recruitment process under the European Parliament’s and
-                                    Council of the European Union Regulation on the Protection of Natural Persons as of
-                                    27 April 2016, with regard to the processing of personal data and on the free
-                                    movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
-                                </p>
-                            </label>
-                        </div>
-                        <button type="submit" name="log" class="medium-btn">Send</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <!-- section contact closing -->
+          </div>
+          <div class="map" id="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.1015783348334!2d23.462335415425255!3d51.12503434640912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47239bb24f437ea1%3A0xca40f45a777510bf!2sT%C5%82umacz%20przysi%C4%99g%C5%82y%20j%C4%99zyka%20niemieckiego%20Irena%20Kartocha!5e0!3m2!1spl!2spl!4v1638799253278!5m2!1spl!2spl"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <!-- section contact closing -->
     </main>
-    <!------------- footer------->
-    <footer class="container-footer">
-        <div class="container">
-            <div class="footer-info">
-                <div class="logo-footer">BestShop</div>
-                <div class="copyrights"><span>&copy;</span> 2019 BestShop LTD, All Rights Reserved</div>
-            </div>    
-            <div class="social-media">
-                <a href="https://twitter.com/explore">
-                    <img src="assets/Twitter.svg" alt="logo-twitter">
-                </a>
-                <a href="https://www.facebook.com/">
-                    <img src="assets/Facebook.svg" alt="logo-facebook">
-                </a> 
-            </div>
-        </div>                
-    </footer>
-</body>
+    <script src="js/app.js">
 
+      $(document).on("click", 'a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        if ($.attr(this, "href") == "#download") {
+          $("html, body").animate(
+            {
+              scrollTop: $($.attr(this, "href")).offset().top - 180,
+            },
+            500
+          );
+        } else {
+          $("html, body").animate(
+            {
+              scrollTop: $($.attr(this, "href")).offset().top - 0,
+            },
+            500
+          );
+        }
+      });
+    </script>
+  </body>
 </html>

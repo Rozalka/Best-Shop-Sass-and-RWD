@@ -1,64 +1,73 @@
 .opening {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(222, 222, 222, 1) 100%,
+    rgba(112, 112, 112, 1) 100%
+  );
+  padding-bottom: 90px;
+
+  .opening-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
 
-    .opening-container {
-        margin-top: 100px;
-        text-align: center;
-
-        h1 {
-            text-transform: capitalize;
-            margin-bottom: 20px;
-        }
-
-        p {
-            margin-bottom: 28px;
-            padding: 0 70px;
-        }
-
-        .big-btn {
-            color: $color-white;
-            font-family: $font-paragraphs;
-            font-weight: 700;
-            display: inline-block;
-            padding: 22px 92px 23px;
-            border: none;
-            background: $color-primary;
-            border-radius: $radius-big-btn;
-            box-shadow: 5px 10px 14px #07ACE629;
-        }
+    &__info {
+      margin-top: -80px;
+      width: 60%;
+      align-self: flex-end;
     }
-
-    img {
-        width: 220%;
-        height: auto;
-        transform: translateX(-28%);
+    h1::first-letter {
+      font-size: 5rem;
+      color: $color-redish;
     }
+    span {
+      margin-left: 85px;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    transform: translateX(5%);
+    z-index: 1;
+  }
 }
-
-@media (min-width: 790px) {
-    .opening {
-        height: calc(100vh - 70px);
-
-        .opening-container {
-            margin-top: 130px;
-
-            p {
-                margin-bottom: 38px;
-                padding: 0;
-            }
-
-            .big-btn {
-                padding: 22px 157px 23px;
-            }
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-            transform: translateX(0%);
-        }
+@media (max-width: 1200px) {
+  .opening {
+    .opening-container__info {
+      width: 70%;
     }
+  }
+}
+@media (max-width: 991px) {
+  .opening {
+    .opening-container__info {
+      width: 80%;
+      margin-top: -60px;
+      h1::first-letter {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .opening {
+    padding-bottom: 70px;
+    .opening-container__info {
+      margin-top: -45px;
+    }
+    h1::first-letter {
+      font-size: 2.125rem;
+    }
+  }
+}
+@media (min-width: 790px) {
+  img {
+    width: 100%;
+    height: auto;
+  }
 }

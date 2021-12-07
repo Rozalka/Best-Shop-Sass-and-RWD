@@ -1,0 +1,119 @@
+.qualifications {
+  position: relative;
+  display: flex;
+
+  &__img {
+    // height: 450px;
+    img {
+      height: 100%;
+    }
+    // background: linear-gradient(90deg, white 0%, #dedede 100%, #707070 100%);
+  }
+}
+.qualifications-container {
+  opacity: 1;
+  display: flex;
+  align-content: center;
+  padding-left: 80px;
+  width: 60%;
+
+  &__content {
+    margin-top: 70px;
+  }
+  &__small-header {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    margin-left: 65px;
+  }
+  &__item {
+    padding: 20px;
+    position: relative;
+    span {
+      font-weight: 700;
+    }
+  }
+  &__item::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid $color-redish;
+    top: 25px;
+    left: -15px;
+  }
+}
+@media (max-width: 992px) {
+  .qualifications__img {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .qualifications-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-right: 80px;
+    background-color: $color-white;
+
+    &::before {
+      content: " ";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.2;
+      background-image: url("/assets/obrazek.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-width: 790px) {
+  .qualifications-container {
+    // margin-top: 50px;
+
+    .qualifications-small-header {
+      padding: 0;
+    }
+
+    .qualifications-info {
+      flex-direction: row;
+      margin: 100px auto 120px;
+
+      .box {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .qualifications {
+    .qualifications-container {
+      padding-left: 20px;
+      padding-right: 20px;
+      &__content {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      &__list {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .qualifications {
+    .qualifications-container__content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
